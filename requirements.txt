@@ -1,0 +1,19 @@
+# Core dependencies for PDF context window stuffing experiment
+click>=8.1.0              # CLI framework
+rich>=13.0.0              # Beautiful terminal output
+pandas>=2.0.0             # Data analysis and metrics
+PyMuPDF>=1.23.0           # PDF processing with image extraction (also known as fitz)
+Pillow>=10.0.0            # Image handling and processing
+
+# Google Cloud dependencies (reusing existing patterns)
+google-genai>=0.3.0       # Gemini API client
+google-auth>=2.20.0       # Authentication
+google-cloud-core>=2.4.0  # Core Google Cloud utilities
+
+# Development and testing
+pytest>=7.4.0             # Testing framework
+python-dotenv>=1.0.0      # Environment variable loading
+pyyaml>=6.0.0             # Configuration file parsing
+
+# Optional but recommended
+tqdm>=4.65.0              # Progress bars for long operations

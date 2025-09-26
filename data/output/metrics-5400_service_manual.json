@@ -1,0 +1,26 @@
+{
+  "processed_at": "2025-09-24T16:15:09.678088",
+  "tool_version": "1.0.0",
+  "files": [
+    {
+      "filename": "5400_service_manual.pdf",
+      "original_size_bytes": 49459899,
+      "text_only_bytes": 825999,
+      "full_extraction_bytes": 2596757,
+      "compression_ratio": 94.7,
+      "pages": 886,
+      "images_found": 545,
+      "processing_time_seconds": 7240.73,
+      "gemini_tokens_used": 2523523
+    }
+  ],
+  "summary": {
+    "total_files": 1,
+    "total_original_bytes": 49459899,
+    "total_compressed_bytes": 2596757,
+    "average_compression": 94.7,
+    "total_images": 545,
+    "total_gemini_tokens": 2523523,
+    "total_processing_time": 7240.73
+  }
+}

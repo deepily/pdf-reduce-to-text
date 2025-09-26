@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-09-24T16:15:09.678387",
+  "status": "success",
+  "files_analyzed": 1,
+  "cost_analysis": {
+    "total_tokens": 2523523,
+    "estimated_cost_usd": 0.18926422499999998,
+    "cost_per_file": 0.18926422499999998,
+    "cost_per_page": 0.000213616506772009,
+    "cost_per_image": 0.0003472738073394495
+  },
+  "performance_analysis": {
+    "avg_processing_time": 7240.729772806168,
+    "files_per_minute": 0.008286457564725111,
+    "pages_per_minute": 7.341801402346448,
+    "images_per_minute": 4.516119372775186,
+    "bottleneck_analysis": "High image count - consider parallel processing"
+  },
+  "compression_analysis": {
+    "avg_compression_ratio": 94.74977294231837,
+    "best_compression": 94.74977294231837,
+    "worst_compression": 94.74977294231837,
+    "compression_by_file_size": {
+      "small (< 5MB)": 0.0,
+      "medium (5-15MB)": 0.0,
+      "large (> 15MB)": 94.74977294231837
+    },
+    "space_saved_mb": 44.69217491149902
+  },
+  "recommendations": [
+    "Consider batch processing to reduce per-file overhead",
+    "Image processing is slow - consider resizing images before processing"
+  ],
+  "summary": {
+    "total_space_saved_mb": 44.69217491149902,
+    "estimated_total_cost_usd": 0.18926422499999998,
+    "avg_processing_time_seconds": 7240.729772806168,
+    "avg_compression_ratio": 94.74977294231837
+  }
+}
