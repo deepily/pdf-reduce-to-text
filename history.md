@@ -1,21 +1,30 @@
 # Project History - PDF Context Window Stuffing Tool
 
-**Current Status**: Session-end workflow configured with slash command
+**Current Status**: Workflow automation complete with session-end and history management slash commands
 **Implementation Document**: `rnd/2025.09.23-context-stuffing-design.md`
 **Next Priority**: Test authentication and basic PDF processing functionality
 
 ## 2025.10.01
 
-### Session Summary
+### Session Summary (Part 1)
 - **Updated project prefix** from `[PDF-RTX]` to `[PDF-REDUCE]` in CLAUDE.md
 - **Created session-end slash command** at `.claude/commands/pdf-reduce-session-end.md`
 - **Configured canonical workflow integration** pointing to planning-is-prompting → workflow/session-end.md
 - **Verified data/ directory excluded** from git tracking (PDFs and outputs protected)
 
+### Session Summary (Part 2)
+- **Installed history management slash command** at `.claude/commands/pdf-reduce-history-management.md`
+- **Updated .gitignore strategy** from blanket exclusion to selective tracking of .claude/ directory
+- **Enabled team collaboration** - slash commands now tracked in version control
+- **Executed health check** - history.md at 450 tokens (✅ HEALTHY status)
+- **Researched best practices** for Claude Code .claude/ directory tracking (2024-2025 guidance)
+
 **Key Files Created/Modified**:
 - Updated `CLAUDE.md` with `[PDF-REDUCE]` prefix and project identity section
 - Created `.claude/commands/` directory
 - Created `.claude/commands/pdf-reduce-session-end.md` slash command
+- Created `.claude/commands/pdf-reduce-history-management.md` slash command
+- Updated `.gitignore` to selectively track .claude/ (excludes settings.local.json, cache/, *.log)
 
 **Todo for Next Session**:
 - [ ] Test Google Cloud authentication setup
@@ -23,7 +32,6 @@
 - [ ] Run basic PDF processing test with sample document
 - [ ] Test CLI commands and verify output formatting
 - [ ] Create sample input PDFs for testing compression ratios
-- [ ] Consider installing `/pdf-reduce-history-management` slash command
 
 ## 2025.09.25
 
