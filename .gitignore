@@ -144,8 +144,10 @@ ENV/
 env.bak/
 venv.bak/
 
-# Claude Code settings and cache
-.claude
+# Claude Code - track team configs, ignore personal overrides
+.claude/settings.local.json
+.claude/cache/
+.claude/*.log
 
 # Spyder project settings
 .spyderproject
