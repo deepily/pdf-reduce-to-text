@@ -2,9 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project Identity
+
+**Short Project Prefix**: `[PDF-REDUCE]`
+
+Use this prefix in all todo lists, notifications, and queries requiring user approval or guidance.
+
 ## Project Overview
 
-[PDF-RTX] PDF Context Window Stuffing Tool - A CLI experiment that extracts text from PDFs and uses Gemini 2.5 Flash to generate image descriptions and OCR, creating compressed text representations suitable for context window optimization in Gemini Live.
+PDF Context Window Stuffing Tool - A CLI experiment that extracts text from PDFs and uses Gemini 2.5 Flash to generate image descriptions and OCR, creating compressed text representations suitable for context window optimization in Gemini Live.
 
 ## Key Commands
 
