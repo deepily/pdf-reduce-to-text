@@ -149,3 +149,35 @@ python src/pdf_processor.py     # Test PDF processing
 ## Implementation History
 
 Read `rnd/2025.09.23-context-stuffing-design.md` for complete technical architecture, research questions, and validation plan. Key phases completed include core infrastructure, image processing, metrics analysis, and comprehensive verbosity system.
+
+## Installed Workflows
+
+**Session Management**:
+- `/plan-session-start` - Initialize work session (load history, identify TODOs, present context)
+- `/plan-session-end` - Wrap up session (update history, commit changes, send notifications)
+
+**History Management**:
+- `/plan-history-management` - Manage history.md archival (modes: check/archive/analyze/dry-run)
+
+**Backup Infrastructure**:
+- `/plan-backup` - Dry-run backup preview (safe default)
+- `/plan-backup --write` - Execute actual backup
+- `/plan-backup --check-for-update` - Check for script updates
+
+**Configuration**:
+- History file: ./history.md
+- Archive directory: ./history/
+- Planning documents: ./rnd/
+- Backup source: /mnt/DATA01/include/www.deepily.ai/projects/pdf-reduce-to-text/
+- Backup destination: /mnt/DATA02/include/www.deepily.ai/projects/pdf-reduce-to-text/
+- Backup exclusions: src/scripts/conf/rsync-exclude.txt
+
+## Session Workflows
+
+**Session Start**: Use `/plan-session-start` or see planning-is-prompting → workflow/session-start.md
+
+**Session End**: Use `/plan-session-end` or see planning-is-prompting → workflow/session-end.md
+
+**History Management**: See planning-is-prompting → workflow/history-management.md
+
+**Backup Management**: See planning-is-prompting → workflow/backup-version-check.md

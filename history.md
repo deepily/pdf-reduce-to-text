@@ -1,8 +1,54 @@
 # Project History - PDF Context Window Stuffing Tool
 
-**Current Status**: Workflow automation complete with session-end and history management slash commands
+**Current Status**: Planning-is-prompting workflows fully installed (Session, History, Backup)
 **Implementation Document**: `rnd/2025.09.23-context-stuffing-design.md`
 **Next Priority**: Test authentication and basic PDF processing functionality
+
+## 2025.10.11
+
+### Session Summary - Planning-is-Prompting Workflow Installation
+- **Executed installation wizard** from planning-is-prompting repository using interactive workflow selection
+- **Selected workflows**: Session Management (A) + History Management (B) + Backup Infrastructure (D)
+- **Configured project settings** using [PDF-REDUCE] prefix and project-specific paths
+- **Installed slash commands**:
+  - `/plan-session-start` - Initialize work sessions with history loading
+  - `/plan-session-end` - Wrap up sessions with history updates and commits
+  - `/plan-history-management` - Archive history.md when approaching token limits (4 modes)
+  - `/plan-backup` - Rsync backup with version checking (dry-run safe default)
+- **Replaced old slash commands** with canonical planning-is-prompting naming convention
+  - Removed `pdf-reduce-session-end.md` and `pdf-reduce-history-management.md`
+  - Adopted `/plan-*` naming convention (identifies source repository)
+- **Created backup infrastructure**:
+  - `src/scripts/backup.sh` - Configured for DATA01 → DATA02 sync
+  - `src/scripts/conf/rsync-exclude.txt` - Default exclusion patterns
+- **Created archive directory** at `history/` for history management
+- **Updated CLAUDE.md** with complete workflow documentation and configuration
+- **Validated installation** - All slash commands, scripts, and directories verified
+
+**Key Files Created/Modified**:
+- Created `.claude/commands/plan-session-start.md`
+- Created `.claude/commands/plan-session-end.md`
+- Created `.claude/commands/plan-history-management.md`
+- Created `.claude/commands/plan-backup.md`
+- Created `src/scripts/backup.sh` (executable)
+- Created `src/scripts/conf/rsync-exclude.txt`
+- Created `history/` archive directory
+- Updated `CLAUDE.md` with installed workflows documentation
+- Removed old `.claude/commands/pdf-reduce-*.md` files (replaced with plan-* convention)
+
+**Configuration**:
+- Project Prefix: [PDF-REDUCE]
+- History file: ./history.md (551 tokens, 2.2% of limit - ✅ HEALTHY)
+- Archive directory: ./history/
+- Backup source: /mnt/DATA01/include/www.deepily.ai/projects/pdf-reduce-to-text/
+- Backup destination: /mnt/DATA02/include/www.deepily.ai/projects/pdf-reduce-to-text/
+
+**Todo for Next Session**:
+- [ ] Test `/plan-session-start` workflow (slash command should be available after Claude Code reload)
+- [ ] Run first backup dry-run with `/plan-backup`
+- [ ] Test Google Cloud authentication setup
+- [ ] Verify Gemini 2.5 Flash API connectivity
+- [ ] Run basic PDF processing test with sample document
 
 ## 2025.10.01
 
