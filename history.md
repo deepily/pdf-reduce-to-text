@@ -1,12 +1,50 @@
 # Project History - PDF Context Window Stuffing Tool
 
-**Current Status**: Planning-is-prompting workflows fully installed (Session, History, Backup)
+**Current Status**: Testing workflows installed - All planning-is-prompting workflows complete
 **Implementation Document**: `rnd/2025.09.23-context-stuffing-design.md`
-**Next Priority**: Test authentication and basic PDF processing functionality
+**Next Priority**: Run baseline tests and begin development work
 
 ## 2025.10.11
 
-### Session Summary - Planning-is-Prompting Workflow Installation
+### Session Summary (Part 2) - Testing Workflows Installation
+- **Executed installation wizard** for additional workflows (ran `/plan-install-wizard` equivalent)
+- **Selected Testing Workflows (E)** for installation
+- **Configured smoke test infrastructure** for module-level validation
+- **Installed testing slash commands**:
+  - `/plan-test-baseline` - Establish pre-change baseline (collect test results before changes)
+  - `/plan-test-remediation` - Post-change verification (compare vs baseline, fix regressions)
+  - `/plan-test-harness-update` - Test maintenance planning (analyze changes, identify missing tests)
+- **Created test result directories**: tests/results/logs/ and tests/results/reports/
+- **Customized for PDF-REDUCE project**:
+  - Configured for smoke tests via module __main__ blocks
+  - Test modules: src/auth_checker.py, src/gemini_client.py, src/pdf_processor.py
+  - Module execution: python -m src.auth_checker (and similar for others)
+  - No health check required (CLI tool, no server dependencies)
+- **Updated CLAUDE.md** with testing workflows documentation and configuration
+- **All workflows now installed**: Session Management, History Management, Backup Infrastructure, Testing Workflows
+
+**Key Files Created/Modified**:
+- Created `.claude/commands/plan-test-baseline.md`
+- Created `.claude/commands/plan-test-remediation.md`
+- Created `.claude/commands/plan-test-harness-update.md`
+- Created `tests/results/logs/` directory
+- Created `tests/results/reports/` directory
+- Updated `CLAUDE.md` with testing workflows section
+
+**Configuration**:
+- Test approach: Existing smoke tests (module-by-module execution)
+- Test modules: auth_checker, gemini_client, pdf_processor
+- Execution method: python -m src.MODULE_NAME
+- Results directories created for baseline and comparison reports
+
+**Todo for Next Session**:
+- [ ] Run first baseline test with `/plan-test-baseline` (optional - when ready)
+- [ ] Test Google Cloud authentication setup
+- [ ] Verify Gemini 2.5 Flash API connectivity
+- [ ] Run basic PDF processing test with sample document
+- [ ] Test CLI commands and verify output formatting
+
+### Session Summary (Part 1) - Planning-is-Prompting Workflow Installation
 - **Executed installation wizard** from planning-is-prompting repository using interactive workflow selection
 - **Selected workflows**: Session Management (A) + History Management (B) + Backup Infrastructure (D)
 - **Configured project settings** using [PDF-REDUCE] prefix and project-specific paths

@@ -181,3 +181,23 @@ Read `rnd/2025.09.23-context-stuffing-design.md` for complete technical architec
 **History Management**: See planning-is-prompting → workflow/history-management.md
 
 **Backup Management**: See planning-is-prompting → workflow/backup-version-check.md
+
+**Testing Workflows**:
+- `/plan-test-baseline` - Establish pre-change baseline (collect test results before changes)
+- `/plan-test-remediation` - Post-change verification (compare vs baseline, fix regressions)
+- `/plan-test-harness-update` - Test maintenance planning (analyze changes, identify missing tests)
+
+## Testing Workflows
+
+**Baseline Collection**: See planning-is-prompting → workflow/testing-baseline.md
+
+**Post-Change Remediation**: See planning-is-prompting → workflow/testing-remediation.md
+
+**Test Harness Maintenance**: See planning-is-prompting → workflow/testing-harness-update.md
+
+**Test Configuration**:
+- Test types: smoke (module-level validation via __main__ blocks)
+- Test modules: src/auth_checker.py, src/gemini_client.py, src/pdf_processor.py
+- Logs directory: tests/results/logs
+- Reports directory: tests/results/reports
+- Health check: None (CLI tool, no server dependencies)
